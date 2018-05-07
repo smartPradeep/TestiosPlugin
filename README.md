@@ -13,15 +13,15 @@ Create a new Cordova Project
 
 Install Android platform
 
-    $ cordova platform add android
+    $ cordova platform add ios
     
 Integrate Smartech SDK in created Cordova Project by following below github link
 
-    https://github.com/NetcoreSolutions/Smartech-Android-FCM-SDK
+    https://github.com/NetcoreSolutions/Smartech-ios-sdk
 
 Install the plugin
 
-    $ cordova plugin add https://github.com/NetcoreSolutions/Smartech-Cordova-Android-FCM-Plugin.git
+    $ cordova plugin add https://github.com/smartPradeep/TestiosPlugin.git
 
 Edit `www/js/index.js` and add the following code inside `onDeviceReady` function
 

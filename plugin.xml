@@ -30,7 +30,7 @@
   </platform>
 
   <platform name="ios">
-    
+    <framework src="src/ios/NetCorePush.framework" />
     <config-file target="config.xml" parent="/widget">
       <feature name="Smartech">
         <param name="ios-package" value="Smartech"/>
@@ -39,6 +39,9 @@
 
     <header-file src="src/ios/Smartech.h" target-dir="SmartechPlugin"/>
     <source-file src="src/ios/Smartech.m" target-dir="SmartechPlugin"/>
+          
+    <header-file src="src/ios/AppDelegate+Smartech.h" target-dir="SmartechPlugin"/>
+    <source-file src="src/ios/AppDelegate+Smartech.m" target-dir="SmartechPlugin"/>
   </platform>
 
   <platform name="wp7">

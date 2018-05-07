@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.netcore.smartech"
+        version="0.7.0">
+
+  <name>Smartech</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/smartech.js" target="js/smartech.js"/>
+
+  <js-module src="www/smartech.js" name="smartech">
+    <clobbers target="smartech" />
+  </js-module>
+
+  <platform name="android">
+    <framework src="in.netcore.smartechfcm:smartech-fcm:1.0.9" />
+    <framework src="com.google.code.gson:gson:2.8.0" />
+    <framework src="com.google.firebase:firebase-messaging:11.6.0" />
+       
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Smartech">
+        <param name="android-package" value="com.netcore.plugin.Smartech"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Smartech.java" target-dir="src/com/netcore/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Smartech">
+        <param name="ios-package" value="Smartech"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/Smartech.h" target-dir="SmartechPlugin"/>
+    <source-file src="src/ios/Smartech.m" target-dir="SmartechPlugin"/>
+  </platform>
+
+  <platform name="wp7">
+    <source-file src="src/wp7/Hello.cs"/>
+  </platform>
+
+</plugin>

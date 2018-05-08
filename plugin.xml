@@ -30,7 +30,7 @@
   </platform>
 
   <platform name="ios">
-    <framework src="src/ios/NetCorePush.framework" />
+    <framework src="Netcore-Smartech-iOS-SDK" type="podspec" spec="~> 2.1.4" />
     <config-file target="config.xml" parent="/widget">
       <feature name="Smartech">
         <param name="ios-package" value="Smartech"/>
